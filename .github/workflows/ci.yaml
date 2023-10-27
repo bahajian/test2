@@ -11,10 +11,10 @@ jobs:
       run: npm install
     - name: build project assets
       run: npm run build
-    - name: Upload ststic site content
+    - name: Upload static site content
       uses: actions/upload-artifact@v3
       with:
-        name: ststic-site
+        name: static-site
         path: .next/
   release-project:
     name: Release project
