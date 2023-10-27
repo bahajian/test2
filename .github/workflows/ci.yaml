@@ -1,11 +1,7 @@
 name: test ci
-on:
-  push:
-#    branches: [ "master" ]
-#  pull_request:
-#    branches: [ "master" ]
+on: push
 jobs:
-  first-job:
+  build-project:
     name: Build project
     runs-on: ubuntu-latest
     steps:
@@ -30,7 +26,7 @@ jobs:
       with:
         name: static-site
     - name: Archive site content
-      uses: thedoctor/zip-release@master
+      uses: thedoctor0/zip-release@master
       with:
         filename: site.zip
 
